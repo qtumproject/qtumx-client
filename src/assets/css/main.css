@@ -1,0 +1,21 @@
+@media screen and (min-width: 1088px) {
+  .container-box, nav > .v-toolbar__content {
+    max-width: 960px;
+    width: 960px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container-box, nav > .v-toolbar__content {
+    max-width: 1152px;
+    width: 1152px;
+  }
+}
+
+.container-box, nav > .v-toolbar__content {
+  margin: 0 auto;
+  position: relative;
+}
+.container-box {
+  padding: 0 24px;
+}
