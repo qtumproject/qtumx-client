@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-toolbar color="grey darken-3" dark fixed>
-      <v-toolbar-title @click="jumpTo('Index')">NUWA</v-toolbar-title>
+      <v-toolbar-title @click="jumpTo('Index')">QTUMX</v-toolbar-title>
       <v-subheader>One Click One Chain</v-subheader>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
