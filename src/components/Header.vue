@@ -7,6 +7,7 @@
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn flat href="https://github.com/qtumproject/qtum-enterprise/releases" target="_blank">Download</v-btn>
         <v-btn flat href="https://docs.qtum.org/zh/One-Click-Launch-Chain/" target="_blank">Document(Chinese)</v-btn>
+        <v-btn flat href="https://docs.qtum.org/en/One-Click-Launch-Chain/" target="_blank">Document(English)</v-btn>
         <v-btn flat href="mailto:x@qtum.org" target="_blank">Email</v-btn>
         <template v-if="user">
           <!--v-subheader>Hello, {{ user.address }}</v-subheader-->
