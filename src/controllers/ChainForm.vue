@@ -50,7 +50,12 @@
       <label>Default port *</label>
       <v-text-field
         v-model="defaultPort"
-        :rules="[this.fieldRequired,this.isPositiveInt]"
+        :rules="[this.fieldRequired,this.isPositiveInt,this.portLimit]"
+      ></v-text-field>
+      <label>Rpc prot *</label>
+      <v-text-field
+        v-model="rpcPort"
+        :rules="[this.fieldRequired,this.isPositiveInt,this.portLimit]"
       ></v-text-field>
       <label>Dns seed</label>
       <v-text-field
@@ -100,6 +105,7 @@
         blockInterval: 10,
         blockTimeout: 5,
         defaultPort: '',
+        rpcProt: '',
         dnsSeed: '',
         ipSeed: '',
         initReward: 2000000,
@@ -125,6 +131,9 @@
       },
       isPositiveInt(v) {
         return /^[1-9][0-9]*$/.test(v) || 'This field must be a positive integer';
+      },
+      portLimit(v) {
+        return (v <= 65535 && v >= 1024) || 'This field is limited 1024-65535';
       },
       async submit() {
         const res = (await utils.postData('/api/chain/launch', {
